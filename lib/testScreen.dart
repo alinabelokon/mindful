@@ -5,6 +5,10 @@ class testScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    //creating the audio player, play and pause functions
+    /* All the information about this package is here:
+     https://pub.dev/packages/audioplayers */
+
     AudioPlayer audioPlayer = AudioPlayer();
 
     play() async {
@@ -12,31 +16,32 @@ class testScreen extends StatelessWidget {
       if (result == 1) {
         // success
       }
-
     }
 
     pause() async{
       int result = await audioPlayer.pause();
     }
 
+    //The screen components
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text('Back'),
       ),
       body: Column(
         children: [
           Center(
+            //play button, on press the play function will be executed
             child: ElevatedButton(
-              child: Text('play'),
+              child: Icon(Icons.play_arrow),
               onPressed: () {
                 play();
-
               },
             ),
           ),
-          Center(
+          Center( // pause button
             child: ElevatedButton(
-              child: Text('Stop'),
+              child: Icon(Icons.pause),
               onPressed: () {
                pause();
               },
