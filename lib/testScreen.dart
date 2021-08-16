@@ -12,6 +12,11 @@ class testScreen extends StatelessWidget {
       if (result == 1) {
         // success
       }
+
+    }
+
+    pause() async{
+      int result = await audioPlayer.pause();
     }
 
     return Scaffold(
@@ -25,7 +30,7 @@ class testScreen extends StatelessWidget {
               child: Text('play'),
               onPressed: () {
                 play();
-                // Navigate to second route when tapped.
+
               },
             ),
           ),
@@ -33,7 +38,7 @@ class testScreen extends StatelessWidget {
             child: ElevatedButton(
               child: Text('Stop'),
               onPressed: () {
-                // Navigate to second route when tapped.
+               pause();
               },
             ),
           ),
