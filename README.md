@@ -2,7 +2,7 @@
 # mindful
 
 This basic app contains:
-- List of clicable listView items
+- List of clickable listView items
 - Navigation between 2 screens
 - Audio player (external library - package ) to play remote file on the Internet (URL)
 
